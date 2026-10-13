@@ -9,7 +9,7 @@ export default function Certificate() {
           <span className="eyebrow eyebrow-light">REGULATORY COMPLIANCE</span>
           <h1 className="section-heading section-heading-light" style={{ fontSize: '3rem' }}>Quality & Safety Certifications</h1>
           <p className="section-description" style={{ color: '#d0ddd4', margin: '0 auto' }}>
-            Meeting global food safety, religious, and clean-label dietary standards across all 19 natural food color SKUs.
+            Meeting global food safety, religious, and clean-label dietary standards across our portfolio of natural food color SKUs.
           </p>
         </div>
       </section>

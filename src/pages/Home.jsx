@@ -124,7 +124,7 @@ export default function Home({ onOpenQuote }) {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px' }}>
             <h3 className="hm-heading" style={{ margin: 0, textAlign: 'left' }}>Featured Food Color SKUs</h3>
             <Link to="/products" className="btn btn-outline-dark">
-              View All 19 SKUs
+              View All {PRODUCTS.length} SKUs
             </Link>
           </div>
           <div className="product-grid">

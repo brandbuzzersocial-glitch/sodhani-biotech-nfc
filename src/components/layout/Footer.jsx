@@ -32,7 +32,7 @@ export default function Footer() {
           <div>
             <h4>Product</h4>
             <ul style={{ listStyle: 'none' }}>
-              <li style={{ marginBottom: '0.5rem' }}><Link to="/products">All 19 Food SKUs</Link></li>
+              <li style={{ marginBottom: '0.5rem' }}><Link to="/products">All 17 Food SKUs</Link></li>
               <li style={{ marginBottom: '0.5rem' }}><Link to="/products/natural-food-color-extracts">Natural Food Color Extracts</Link></li>
               <li style={{ marginBottom: '0.5rem' }}><Link to="/products/natural-food-colors">Natural Food Colors</Link></li>
               <li style={{ marginBottom: '0.5rem' }}><Link to="/products/microbial-food-colors">Microbial Food Colors</Link></li>

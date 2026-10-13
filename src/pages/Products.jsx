@@ -25,7 +25,8 @@ export default function Products({ onOpenQuote }) {
     const matchesSearch =
       product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       product.source.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      product.shade.toLowerCase().includes(searchQuery.toLowerCase());
+      product.shade.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      (product.coloringComponent && product.coloringComponent.toLowerCase().includes(searchQuery.toLowerCase()));
 
     // Shade Filter
     let matchesShade = true;
@@ -41,12 +42,12 @@ export default function Products({ onOpenQuote }) {
       {/* Subpage Header */}
       <section className="section-padding" style={{ backgroundColor: 'var(--color-primary-dark)', color: '#ffffff', textAlign: 'center' }}>
         <div className="container">
-          <span className="eyebrow eyebrow-light">VERBATIM INDIA MART CATALOG</span>
+          <span className="eyebrow eyebrow-light">TECHNICAL SPECIFICATION CATALOG</span>
           <h1 className="section-heading section-heading-light" style={{ fontSize: '3rem' }}>
             Natural Food Colors Product Catalog
           </h1>
           <p className="section-description" style={{ color: '#d0ddd4', margin: '0 auto' }}>
-            Explore our complete line of 19 food-grade botanical & fermentation-derived color SKUs. Standardized purity, water solubility, and clean-label compliance.
+            Explore our complete line of {PRODUCTS.length} food-grade botanical & fermentation-derived color SKUs. Standardized purity, water solubility, and clean-label compliance.
           </p>
         </div>
       </section>
