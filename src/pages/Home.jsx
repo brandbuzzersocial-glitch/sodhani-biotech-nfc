@@ -19,12 +19,12 @@ export default function Home({ onOpenQuote }) {
       <div className="container hm-moderinn">
         <div className="hm-moderinn-grid">
           <div>
-            <h2>Elevating Biochemistry of Natural Food Colors</h2>
+            <h2>Elevating the Biochemistry of Natural Food Colors</h2>
             <p>
-              Sodhani Biotech, a pioneering natural color company, is leading the charge to empower natural food colors and challenge the monopoly of synthetic substitutes. What sets us apart is our constant commitment to ongoing improvement. With a cutting-edge laboratory and an experienced research team, we relentlessly enhance our natural food color formulas to offer remarkable results across bakery, beverage, confectionery, dairy, and culinary food applications.
+              Bringing the same research-led approach that shaped our natural dye extracts to the world of food and beverage coloration. Sodhani Biotech was built on a simple belief: that colour derived from nature can match, and often exceed, what synthetic alternatives offer—helping food and beverage manufacturers move away from synthetic dependency, without compromising on performance.
             </p>
             <Link to="/about-us" className="btn btn-success">
-              Read More
+              Read Our Story
             </Link>
           </div>
           <div>
