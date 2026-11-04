@@ -98,7 +98,14 @@ export const PRODUCTS = [
       "US Regulatory Reference": "21 CFR 73.530 (Spirulina extract)",
       "Certification": "COA / TDS / SDS"
     },
-    "image": "/products/spirulina-blue.jpg"
+    "image": "/products/spirulina-blue.jpg",
+    "images": [
+      "/products/gallery/spirulina-blue/1.jpg",
+      "/products/gallery/spirulina-blue/2.jpg",
+      "/products/gallery/spirulina-blue/3.jpg",
+      "/products/gallery/spirulina-blue/4.jpg",
+      "/products/gallery/spirulina-blue/5.jpg"
+    ]
   },
   {
     "id": "gardenia-yellow-color",
@@ -189,7 +196,13 @@ export const PRODUCTS = [
       "Regulatory Reference": "Not separately listed under 21 CFR Part 73 (US) at present — widely approved and used in Asian and other export markets; confirm status for your target country",
       "Certification": "COA / TDS / SDS"
     },
-    "image": "/products/gardenia-yellow.jpg"
+    "image": "/products/gardenia-yellow.jpg",
+    "images": [
+      "/products/gallery/gardenia-yellow/1.jpg",
+      "/products/gallery/gardenia-yellow/2.jpg",
+      "/products/gallery/gardenia-yellow/3.jpg",
+      "/products/gallery/gardenia-yellow/4.jpg"
+    ]
   },
   {
     "id": "gardenia-blue-natural-food-colour",
@@ -279,7 +292,14 @@ export const PRODUCTS = [
       "US Regulatory Reference": "21 CFR 73.168 (Gardenia (genipin) blue) — permitted only in specific categories: sports drinks, flavoured/enhanced non-carbonated water, fruit drinks & ades, ready-to-drink teas, hard and soft candy",
       "Certification": "COA / TDS / SDS"
     },
-    "image": "/products/gardenia-blue.jpg"
+    "image": "/products/gardenia-blue.jpg",
+    "images": [
+      "/products/gallery/gardenia-blue/1.jpg",
+      "/products/gallery/gardenia-blue/2.jpg",
+      "/products/gallery/gardenia-blue/3.jpg",
+      "/products/gallery/gardenia-blue/4.jpg",
+      "/products/gallery/gardenia-blue/5.jpg"
+    ]
   },
   {
     "id": "beetroot-natural-food-colour-4-betanin",
@@ -372,7 +392,14 @@ export const PRODUCTS = [
       "US Regulatory Reference": "21 CFR 73.40 (Dehydrated beets / beet powder)",
       "Certification": "COA / TDS / SDS"
     },
-    "image": "/products/beetroot-red.jpg"
+    "image": "/products/beetroot-red.jpg",
+    "images": [
+      "/products/gallery/beetroot-red/1.jpg",
+      "/products/gallery/beetroot-red/2.jpg",
+      "/products/gallery/beetroot-red/3.jpg",
+      "/products/gallery/beetroot-red/4.jpg",
+      "/products/gallery/beetroot-red/5.jpg"
+    ]
   },
   {
     "id": "norbixin-natural-food-color",
@@ -463,7 +490,16 @@ export const PRODUCTS = [
       "US Regulatory Reference": "21 CFR 73.30 (Annatto extract)",
       "Certification": "COA / TDS / SDS"
     },
-    "image": "/products/annatto.jpg"
+    "image": "/products/annatto.jpg",
+    "images": [
+      "/products/gallery/annatto/1.jpg",
+      "/products/gallery/annatto/2.jpg",
+      "/products/gallery/annatto/3.jpg",
+      "/products/gallery/annatto/4.jpg",
+      "/products/gallery/annatto/5.jpg",
+      "/products/gallery/annatto/6.jpg",
+      "/products/gallery/annatto/7.jpg"
+    ]
   },
   {
     "id": "curcumin-natural-food-colour",
@@ -554,7 +590,14 @@ export const PRODUCTS = [
       "US Regulatory Reference": "21 CFR 73.600 (Turmeric)",
       "Certification": "COA / TDS / SDS"
     },
-    "image": "/products/curcumin.jpg"
+    "image": "/products/curcumin.jpg",
+    "images": [
+      "/products/gallery/curcumin/1.jpg",
+      "/products/gallery/curcumin/2.jpg",
+      "/products/gallery/curcumin/3.jpg",
+      "/products/gallery/curcumin/4.jpg",
+      "/products/gallery/curcumin/5.jpg"
+    ]
   },
   {
     "id": "sodium-copper-chlorophyllin-extract",
@@ -736,7 +779,12 @@ export const PRODUCTS = [
       "US Regulatory Reference": "21 CFR 73.100 (Cochineal extract; carmine)",
       "Certification": "COA / TDS / SDS"
     },
-    "image": "/products/carmine.jpg"
+    "image": "/products/carmine.jpg",
+    "images": [
+      "/products/gallery/carmine/1.jpg",
+      "/products/gallery/carmine/2.jpg",
+      "/products/gallery/carmine/3.jpg"
+    ]
   },
   {
     "id": "natural-radish-red-food-colour",
@@ -826,7 +874,12 @@ export const PRODUCTS = [
       "US Regulatory Reference": "Not separately listed under 21 CFR Part 73 — typically regulated as a vegetable juice colour (21 CFR 73.260) when derived by juicing; confirm classification for your target market",
       "Certification": "COA / TDS / SDS"
     },
-    "image": "/products/radish-red.jpg"
+    "image": "/products/radish-red.jpg",
+    "images": [
+      "/products/gallery/radish-red/1.jpg",
+      "/products/gallery/radish-red/2.jpg",
+      "/products/gallery/radish-red/3.jpg"
+    ]
   },
   {
     "id": "monascus-red-natural-food-colour",
@@ -1092,7 +1145,14 @@ export const PRODUCTS = [
       "US Regulatory Reference": "21 CFR 73.95 (β-Carotene)",
       "Certification": "COA / TDS / SDS"
     },
-    "image": "/products/beta-carotene.jpg"
+    "image": "/products/beta-carotene.jpg",
+    "images": [
+      "/products/gallery/beta-carotene/1.jpg",
+      "/products/gallery/beta-carotene/2.jpg",
+      "/products/gallery/beta-carotene/3.jpg",
+      "/products/gallery/beta-carotene/4.jpg",
+      "/products/gallery/beta-carotene/5.jpg"
+    ]
   },
   {
     "id": "purple-sweet-potato-natural-food-color",
@@ -1182,7 +1242,12 @@ export const PRODUCTS = [
       "US Regulatory Reference": "Not separately listed under 21 CFR Part 73 — typically regulated as a vegetable juice colour (21 CFR 73.260) when derived by juicing; confirm classification for your target market",
       "Certification": "COA / TDS / SDS"
     },
-    "image": "/products/purple-sweet-potato.jpg"
+    "image": "/products/purple-sweet-potato.jpg",
+    "images": [
+      "/products/gallery/purple-sweet-potato/1.jpg",
+      "/products/gallery/purple-sweet-potato/2.jpg",
+      "/products/gallery/purple-sweet-potato/3.jpg"
+    ]
   },
   {
     "id": "carthamus-yellow-natural-food-colour",
@@ -1272,7 +1337,17 @@ export const PRODUCTS = [
       "US Regulatory Reference": "Not separately listed under 21 CFR Part 73 (US) at present — used and approved in various Asian and export markets; confirm status for your target country",
       "Certification": "COA / TDS / SDS"
     },
-    "image": "/products/carthamus-yellow.jpg"
+    "image": "/products/carthamus-yellow.jpg",
+    "images": [
+      "/products/gallery/carthamus-yellow/1.jpg",
+      "/products/gallery/carthamus-yellow/2.jpg",
+      "/products/gallery/carthamus-yellow/3.jpg",
+      "/products/gallery/carthamus-yellow/4.jpg",
+      "/products/gallery/carthamus-yellow/5.jpg",
+      "/products/gallery/carthamus-yellow/6.jpg",
+      "/products/gallery/carthamus-yellow/7.jpg",
+      "/products/gallery/carthamus-yellow/8.jpg"
+    ]
   },
   {
     "id": "natural-paprika-oleoresin-food-colour",
@@ -1364,7 +1439,12 @@ export const PRODUCTS = [
       "US Regulatory Reference": "21 CFR 73.345 (Paprika oleoresin)",
       "Certification": "COA / TDS / SDS"
     },
-    "image": "/products/paprika.jpg"
+    "image": "/products/paprika.jpg",
+    "images": [
+      "/products/gallery/paprika/1.jpg",
+      "/products/gallery/paprika/2.jpg",
+      "/products/gallery/paprika/3.jpg"
+    ]
   },
   {
     "id": "cuttlefish-ink-powder-natural-black",
@@ -1455,7 +1535,13 @@ export const PRODUCTS = [
       "US Regulatory Reference": "Not separately listed under 21 CFR Part 73 as a color additive — confirm applicable regulatory pathway for your target market",
       "Certification": "COA / TDS / SDS"
     },
-    "image": "/products/cuttlefish-ink.jpg"
+    "image": "/products/cuttlefish-ink.jpg",
+    "images": [
+      "/products/gallery/cuttlefish-ink/1.jpg",
+      "/products/gallery/cuttlefish-ink/2.jpg",
+      "/products/gallery/cuttlefish-ink/3.jpg",
+      "/products/gallery/cuttlefish-ink/4.jpg"
+    ]
   },
   {
     "id": "black-carrot-color-natural-food-colour",

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { 
   ArrowLeft, 
@@ -25,6 +25,11 @@ export default function ProductDetail({ onOpenQuote }) {
   const { slug } = useParams();
   const product = PRODUCTS.find((p) => p.slug === slug) || PRODUCTS[0];
   const [activeTab, setActiveTab] = useState('specs'); // 'specs', 'regulatory', 'features', 'applications', 'why-choose'
+  const [selectedImage, setSelectedImage] = useState(product.image);
+
+  useEffect(() => {
+    setSelectedImage(product.image);
+  }, [product.slug, product.image]);
 
   // Related products from the same category or other categories
   const relatedProducts = PRODUCTS.filter((p) => p.slug !== product.slug && (p.categorySlug === product.categorySlug || p.shade === product.shade)).slice(0, 3);
@@ -69,7 +74,7 @@ export default function ProductDetail({ onOpenQuote }) {
               <div 
                 className="feature-image-wrap" 
                 style={{ 
-                  height: '420px', 
+                  height: '340px', 
                   position: 'relative', 
                   backgroundColor: '#f8fafc',
                   border: '1px solid var(--color-border)',
@@ -81,7 +86,7 @@ export default function ProductDetail({ onOpenQuote }) {
                 }}
               >
                 <img 
-                  src={product.image} 
+                  src={selectedImage || product.image} 
                   alt={product.name} 
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
                 />
@@ -128,6 +133,40 @@ export default function ProductDetail({ onOpenQuote }) {
                   {product.technicalSpecs?.Grade || '100% Food Grade'}
                 </div>
               </div>
+
+              {/* Thumbnail Gallery */}
+              {product.images && product.images.length > 1 && (
+                <div style={{ display: 'flex', gap: '10px', marginTop: '12px', overflowX: 'auto', paddingBottom: '4px' }}>
+                  {product.images.map((imgUrl, idx) => {
+                    const isSelected = selectedImage === imgUrl || (idx === 0 && selectedImage === product.image);
+                    return (
+                      <button
+                        key={imgUrl}
+                        type="button"
+                        onClick={() => setSelectedImage(imgUrl)}
+                        style={{
+                          width: '72px',
+                          height: '52px',
+                          flexShrink: 0,
+                          borderRadius: '8px',
+                          overflow: 'hidden',
+                          padding: 0,
+                          border: isSelected ? '2px solid var(--color-primary-dark)' : '1px solid var(--color-border)',
+                          opacity: isSelected ? 1 : 0.7,
+                          transition: 'all 0.2s ease',
+                          cursor: 'pointer'
+                        }}
+                      >
+                        <img
+                          src={imgUrl}
+                          alt={`${product.name} view ${idx + 1}`}
+                          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                        />
+                      </button>
+                    );
+                  })}
+                </div>
+              )}
 
               {/* Quick Spec Highlights Card */}
               <div style={{ marginTop: '1.25rem', background: 'var(--color-bg-linen)', borderRadius: '12px', padding: '1.25rem', border: '1px solid var(--color-border)' }}>
