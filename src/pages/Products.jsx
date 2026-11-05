@@ -13,7 +13,15 @@ export default function Products({ onOpenQuote }) {
   const filteredProducts = PRODUCTS.filter((product) => {
     // Category Filter
     let matchesCategory = true;
-    if (activeCategory === 'extracts') {
+    if (activeCategory === 'water-soluble') {
+      matchesCategory = (product.solubility || '').toLowerCase().includes('water');
+    } else if (activeCategory === 'oil-soluble') {
+      const sol = (product.solubility || '').toLowerCase();
+      matchesCategory =
+        sol.includes('oil') ||
+        product.id === 'natural-paprika-oleoresin-food-colour' ||
+        product.id === 'norbixin-natural-food-color';
+    } else if (activeCategory === 'extracts') {
       matchesCategory = product.categorySlug === 'natural-food-color-extracts';
     } else if (activeCategory === 'colors') {
       matchesCategory = product.categorySlug === 'natural-food-colors';
@@ -58,7 +66,12 @@ export default function Products({ onOpenQuote }) {
           <div className="product-filter-bar">
             {/* Category Tabs */}
             <div className="filter-categories">
-              {CATEGORIES.map((cat) => (
+              {[
+                { id: 'all', name: 'All Product SKUs' },
+                { id: 'water-soluble', name: 'Natural Food Color Water Soluble' },
+                { id: 'oil-soluble', name: 'Natural Food Color Oil Soluble' },
+                ...CATEGORIES.filter((c) => c.id !== 'all')
+              ].map((cat) => (
                 <button
                   key={cat.id}
                   className={`filter-btn ${activeCategory === cat.id ? 'active' : ''}`}

@@ -30,36 +30,30 @@ export default function Header({ onOpenQuote }) {
 
           {/* Desktop Nav Items */}
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
+            <ul className="navbar-nav" style={{ gap: '24px' }}>
               <li className="nav-item">
                 <Link className={`nav-link ${isActive('/') ? 'active' : ''}`} to="/">
                   Home
                 </Link>
               </li>
 
-              {/* About Us Dropdown */}
-              <li className="nav-item dropdown">
+              {/* Our Story (Single clickable link consolidating About Us, Quality & Infrastructure) */}
+              <li className="nav-item">
                 <Link
-                  className={`nav-link dropdown-toggle ${isActive('/about-us') || isActive('/team') || isActive('/infrastructure') || isActive('/certificate') ? 'active' : ''}`}
+                  className={`nav-link ${isActive('/about-us') || isActive('/team') || isActive('/infrastructure') || isActive('/certificate') ? 'active' : ''}`}
                   to="/about-us"
                 >
-                  About Us <ChevronDown size={12} style={{ display: 'inline', marginLeft: 2 }} />
+                  Our Story
                 </Link>
-                <ul className="dropdown-menu">
-                  <li><Link className="dropdown-item" to="/about-us">Our Story</Link></li>
-                  <li><Link className="dropdown-item" to="/team">Our Team</Link></li>
-                  <li><Link className="dropdown-item" to="/infrastructure">Infrastructure</Link></li>
-                  <li><Link className="dropdown-item" to="/certificate">Certification</Link></li>
-                </ul>
               </li>
 
-              {/* Product Link */}
+              {/* Products Link */}
               <li className="nav-item">
                 <Link
                   className={`nav-link ${location.pathname.startsWith('/products') ? 'active' : ''}`}
                   to="/products"
                 >
-                  Product
+                  Products
                 </Link>
               </li>
 
@@ -70,26 +64,14 @@ export default function Header({ onOpenQuote }) {
               </li>
 
               <li className="nav-item">
-                <Link className={`nav-link ${isActive('/food-lab') ? 'active' : ''}`} to="/food-lab">
-                  Workshop
-                </Link>
-              </li>
-
-              <li className="nav-item">
-                <Link className={`nav-link ${isActive('/blogs') ? 'active' : ''}`} to="/blogs">
+                <Link className={`nav-link ${location.pathname.startsWith('/blogs') ? 'active' : ''}`} to="/blogs">
                   Blogs
                 </Link>
               </li>
 
               <li className="nav-item">
-                <Link className={`nav-link ${isActive('/careers') ? 'active' : ''}`} to="/careers">
-                  Careers
-                </Link>
-              </li>
-
-              <li className="nav-item">
                 <Link className={`nav-link ${isActive('/contact') ? 'active' : ''}`} to="/contact">
-                  Contact Us
+                  Contact
                 </Link>
               </li>
             </ul>

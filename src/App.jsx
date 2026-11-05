@@ -60,6 +60,8 @@ export default function App() {
             
             {/* Products Routing */}
             <Route path="/products" element={<Products onOpenQuote={handleOpenQuote} />} />
+            <Route path="/products/water-soluble" element={<CategoryPage onOpenQuote={handleOpenQuote} />} />
+            <Route path="/products/oil-soluble" element={<CategoryPage onOpenQuote={handleOpenQuote} />} />
             <Route path="/products/natural-food-color-extracts" element={<CategoryPage onOpenQuote={handleOpenQuote} />} />
             <Route path="/products/natural-food-colors" element={<CategoryPage onOpenQuote={handleOpenQuote} />} />
             <Route path="/products/microbial-food-colors" element={<CategoryPage onOpenQuote={handleOpenQuote} />} />

@@ -1431,3 +1431,31 @@ ul.flaglist li img {
   gap: 8px;
 }
 
+@media (max-width: 960px) {
+  .hm-commitment-grid,
+  .hm-climate-card,
+  .hm-portfolio-slider,
+  .hm-leadership-grid,
+  .hm-sample-selector,
+  .about-creative-hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+
+  .hm-compact-cat-banner {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+    justify-items: center;
+    padding: 28px 24px !important;
+  }
+
+  .hm-dietary-strip {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .hm-portfolio-cards {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+

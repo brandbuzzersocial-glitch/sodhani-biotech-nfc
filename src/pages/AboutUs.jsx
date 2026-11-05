@@ -3,23 +3,18 @@ import { Link } from 'react-router-dom';
 import {
   TrendingUp,
   Palette,
-  Layers,
-  ShieldCheck,
   CheckCircle2,
   ArrowRight,
   Clock,
   Globe2,
   FlaskConical,
-  Leaf,
-  Award,
   Sparkles,
-  Beaker,
   Scale,
+  Check,
   Microscope,
-  Sprout,
-  Check
+  Factory,
+  ShieldCheck
 } from 'lucide-react';
-import CertificateStrip from '../components/common/CertificateStrip';
 import { CERTIFICATES } from '../data/blogs';
 
 export default function AboutUs({ onOpenQuote }) {
@@ -33,44 +28,308 @@ export default function AboutUs({ onOpenQuote }) {
 
   return (
     <div>
-      {/* 1. Subpage Hero Banner */}
+      {/* ===================================================================
+          PART 13: CREATIVE EDITORIAL HERO BANNER FOR "OUR STORY"
+          (Consolidating About Us, Quality & Infrastructure)
+         =================================================================== */}
       <section
-        className="section-padding"
         style={{
-          backgroundColor: 'var(--color-primary-dark)',
+          position: 'relative',
+          background: 'linear-gradient(135deg, #162638 0%, #213750 52%, #29415E 100%)',
           color: '#ffffff',
-          textAlign: 'center',
-          position: 'relative'
+          padding: '76px 0 84px',
+          overflow: 'hidden'
         }}
       >
-        <div className="container">
-          <span className="eyebrow eyebrow-light">ABOUT SODHANI BIOTECH &bull; OUR STORY & HERITAGE</span>
-          <h1 className="section-heading section-heading-light" style={{ fontSize: '2.8rem', maxWidth: '900px', margin: '0 auto 20px' }}>
-            Elevating the Biochemistry of Natural Food Colors
-          </h1>
-          <p className="section-description" style={{ color: '#d0ddd4', margin: '0 auto', fontSize: '1.25rem', maxWidth: '850px' }}>
-            Bringing the same research-led approach that shaped our natural dye extracts to the world of food and beverage coloration.
-          </p>
+        {/* Subtle Decorative Botanical Radial Glows */}
+        <div
+          style={{
+            position: 'absolute',
+            top: '-120px',
+            right: '-80px',
+            width: '440px',
+            height: '440px',
+            borderRadius: '50%',
+            background: 'radial-gradient(circle, rgba(128,158,51,0.28) 0%, rgba(128,158,51,0) 70%)',
+            pointerEvents: 'none'
+          }}
+        />
+        <div
+          style={{
+            position: 'absolute',
+            bottom: '-140px',
+            left: '-80px',
+            width: '420px',
+            height: '420px',
+            borderRadius: '50%',
+            background: 'radial-gradient(circle, rgba(228,182,61,0.20) 0%, rgba(228,182,61,0) 70%)',
+            pointerEvents: 'none'
+          }}
+        />
 
-          <div className="subpage-badge-strip">
-            <span className="subpage-badge-pill">
-              <Sparkles size={15} style={{ color: '#E4B63D' }} /> Decades of Botanical Extraction
-            </span>
-            <span className="subpage-badge-pill">
-              <FlaskConical size={15} style={{ color: '#809E33' }} /> Application-First Formulation
-            </span>
-            <span className="subpage-badge-pill">
-              <Scale size={15} style={{ color: '#E4B63D' }} /> Standardized Batch Consistency
-            </span>
-            <span className="subpage-badge-pill">
-              <Globe2 size={15} style={{ color: '#809E33' }} /> Global Food-Grade Compliance
-            </span>
+        <div className="container" style={{ maxWidth: '1160px', position: 'relative', zIndex: 2 }}>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: '1.15fr 0.85fr',
+              gap: '48px',
+              alignItems: 'center'
+            }}
+            className="about-creative-hero-grid"
+          >
+            {/* Left Column: Editorial Headline, Section Jump Pills & Trust Badges */}
+            <div>
+              <div
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  background: 'rgba(228, 182, 61, 0.14)',
+                  border: '1px solid rgba(228, 182, 61, 0.4)',
+                  color: '#E4B63D',
+                  padding: '6px 16px',
+                  borderRadius: '50px',
+                  fontSize: '12px',
+                  fontWeight: 700,
+                  letterSpacing: '0.1em',
+                  textTransform: 'uppercase',
+                  marginBottom: '20px'
+                }}
+              >
+                <Sparkles size={14} /> ABOUT SODHANI BIOTECH • OUR STORY, QUALITY &amp; INFRASTRUCTURE
+              </div>
+
+              <h1
+                style={{
+                  fontSize: 'clamp(2.2rem, 3.8vw, 3.25rem)',
+                  fontWeight: 700,
+                  lineHeight: 1.15,
+                  color: '#ffffff',
+                  margin: '0 0 18px 0'
+                }}
+              >
+                Elevating the{' '}
+                <span style={{ color: '#A3C644' }}>Biochemistry</span> of Natural Food Colors
+              </h1>
+
+              <p
+                style={{
+                  fontSize: '18px',
+                  lineHeight: 1.65,
+                  color: '#d6e2ec',
+                  margin: '0 0 28px 0',
+                  maxWidth: '600px'
+                }}
+              >
+                Bringing the same research-led approach that shaped our natural dye extracts to the world of food and beverage coloration—backed by our Jaipur extraction plant and 3 specialized analytical labs.
+              </p>
+
+              {/* Quick Section Jump Navigation Pills (About Us, Quality, Infrastructure) */}
+              <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '32px' }}>
+                <a
+                  href="#our-story"
+                  style={{
+                    background: '#809E33',
+                    color: '#ffffff',
+                    padding: '10px 20px',
+                    borderRadius: '50px',
+                    fontSize: '14px',
+                    fontWeight: 600,
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px'
+                  }}
+                >
+                  01. Our Story &amp; Heritage
+                </a>
+                <a
+                  href="#quality"
+                  style={{
+                    background: 'rgba(255,255,255,0.1)',
+                    border: '1px solid rgba(255,255,255,0.25)',
+                    color: '#ffffff',
+                    padding: '10px 20px',
+                    borderRadius: '50px',
+                    fontSize: '14px',
+                    fontWeight: 600,
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px'
+                  }}
+                >
+                  <ShieldCheck size={16} style={{ color: '#E4B63D' }} /> 02. Quality &amp; Certifications
+                </a>
+                <a
+                  href="#infrastructure"
+                  style={{
+                    background: 'rgba(255,255,255,0.1)',
+                    border: '1px solid rgba(255,255,255,0.25)',
+                    color: '#ffffff',
+                    padding: '10px 20px',
+                    borderRadius: '50px',
+                    fontSize: '14px',
+                    fontWeight: 600,
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px'
+                  }}
+                >
+                  <Factory size={16} style={{ color: '#A3C644' }} /> 03. Infrastructure &amp; Labs
+                </a>
+              </div>
+
+              {/* 4 Pillar Badges */}
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px' }}>
+                <div
+                  style={{
+                    background: 'rgba(255,255,255,0.06)',
+                    border: '1px solid rgba(255,255,255,0.14)',
+                    borderRadius: '12px',
+                    padding: '11px 14px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '10px',
+                    fontSize: '13.5px',
+                    fontWeight: 600
+                  }}
+                >
+                  <Sparkles size={16} style={{ color: '#E4B63D', flexShrink: 0 }} />
+                  Decades of Botanical Extraction
+                </div>
+                <div
+                  style={{
+                    background: 'rgba(255,255,255,0.06)',
+                    border: '1px solid rgba(255,255,255,0.14)',
+                    borderRadius: '12px',
+                    padding: '11px 14px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '10px',
+                    fontSize: '13.5px',
+                    fontWeight: 600
+                  }}
+                >
+                  <FlaskConical size={16} style={{ color: '#A3C644', flexShrink: 0 }} />
+                  Application-First Formulation
+                </div>
+                <div
+                  style={{
+                    background: 'rgba(255,255,255,0.06)',
+                    border: '1px solid rgba(255,255,255,0.14)',
+                    borderRadius: '12px',
+                    padding: '11px 14px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '10px',
+                    fontSize: '13.5px',
+                    fontWeight: 600
+                  }}
+                >
+                  <Scale size={16} style={{ color: '#E4B63D', flexShrink: 0 }} />
+                  Standardized Batch Consistency
+                </div>
+                <div
+                  style={{
+                    background: 'rgba(255,255,255,0.06)',
+                    border: '1px solid rgba(255,255,255,0.14)',
+                    borderRadius: '12px',
+                    padding: '11px 14px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '10px',
+                    fontSize: '13.5px',
+                    fontWeight: 600
+                  }}
+                >
+                  <Globe2 size={16} style={{ color: '#A3C644', flexShrink: 0 }} />
+                  Global Food-Grade Compliance
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: Staggered Botanical & Lab Collage with Metric Callouts */}
+            <div style={{ position: 'relative' }}>
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: '1fr 1fr',
+                  gap: '16px',
+                  alignItems: 'center'
+                }}
+              >
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                  <div
+                    style={{
+                      borderRadius: '20px',
+                      overflow: 'hidden',
+                      height: '200px',
+                      border: '2px solid rgba(255,255,255,0.2)',
+                      boxShadow: '0 14px 30px rgba(0,0,0,0.25)'
+                    }}
+                  >
+                    <img
+                      src="/home/jaipur-lab.jpg"
+                      alt="Jaipur Botanical Extraction Lab"
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    />
+                  </div>
+                  <div
+                    style={{
+                      background: 'rgba(255,255,255,0.1)',
+                      backdropFilter: 'blur(8px)',
+                      border: '1px solid rgba(255,255,255,0.2)',
+                      borderRadius: '18px',
+                      padding: '18px 20px'
+                    }}
+                  >
+                    <div style={{ fontSize: '26px', fontWeight: 800, color: '#E4B63D' }}>50,000 sq. ft.</div>
+                    <div style={{ fontSize: '13px', color: '#e2e8f0', marginTop: '2px' }}>
+                      Jaipur Extraction &amp; Spray Drying Facility
+                    </div>
+                  </div>
+                </div>
+
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '24px' }}>
+                  <div
+                    style={{
+                      background: 'rgba(128, 158, 51, 0.25)',
+                      backdropFilter: 'blur(8px)',
+                      border: '1px solid rgba(163, 198, 68, 0.4)',
+                      borderRadius: '18px',
+                      padding: '18px 20px'
+                    }}
+                  >
+                    <div style={{ fontSize: '26px', fontWeight: 800, color: '#A3C644' }}>1,500+ MT</div>
+                    <div style={{ fontSize: '13px', color: '#e2e8f0', marginTop: '2px' }}>
+                      Annual Natural Food Color Capacity
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      borderRadius: '20px',
+                      overflow: 'hidden',
+                      height: '210px',
+                      border: '2px solid rgba(255,255,255,0.2)',
+                      boxShadow: '0 14px 30px rgba(0,0,0,0.25)'
+                    }}
+                  >
+                    <img
+                      src="/home/water-soluble.jpg"
+                      alt="Water-Soluble Botanical Extracts"
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 2. Section: Our Story */}
-      <section className="section-padding-lg" style={{ backgroundColor: '#ffffff' }}>
+      {/* ===================================================================
+          SECTION 1: OUR STORY (#our-story)
+         =================================================================== */}
+      <section id="our-story" className="section-padding-lg" style={{ backgroundColor: '#ffffff' }}>
         <div className="container">
           <div className="feature-row">
             <div className="feature-image-wrap">
@@ -81,7 +340,7 @@ export default function AboutUs({ onOpenQuote }) {
             </div>
 
             <div className="feature-content">
-              <span className="eyebrow" style={{ color: '#809E33' }}>OUR STORY</span>
+              <span className="eyebrow" style={{ color: '#809E33' }}>01 • OUR STORY</span>
               <h2>From natural dyes to natural food colors</h2>
               <p>
                 Sodhani Biotech was built on a simple belief: that colour derived from nature can match, and often exceed, what synthetic alternatives offer. That belief first took shape in the world of natural dyes, where years of research into plant and botanical extraction allowed us to build a trusted, research-backed colour business for the textile industry.
@@ -152,11 +411,8 @@ export default function AboutUs({ onOpenQuote }) {
               </p>
 
               <div style={{ marginTop: '30px', display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
-                <Link to="/food-lab" className="btn btn-success">
-                  Experience Our Food Application Lab <ArrowRight size={16} style={{ marginLeft: 6 }} />
-                </Link>
-                <button className="btn btn-outline-dark" onClick={() => onOpenQuote()}>
-                  Request Application Shade Match
+                <button className="btn btn-success" onClick={() => onOpenQuote()}>
+                  Request Application Shade Match <ArrowRight size={16} style={{ marginLeft: 6 }} />
                 </button>
               </div>
             </div>
@@ -171,52 +427,22 @@ export default function AboutUs({ onOpenQuote }) {
         </div>
       </section>
 
-      {/* 5. Section: Sustainability */}
-      <section className="section-padding-lg" style={{ backgroundColor: 'var(--color-bg-linen)' }}>
-        <div className="container">
-          <div className="feature-row reverse">
-            <div className="feature-content">
-              <span className="eyebrow" style={{ color: '#809E33' }}>SUSTAINABILITY</span>
-              <h2>Colour that respects where it comes from</h2>
-              <p>
-                Natural sourcing comes with a responsibility we take seriously, to the land the raw materials come from, and to the farmers and communities we source through. We look to build sourcing relationships that are stable and fair over the long run, not transactional one-off purchases.
-              </p>
-              <p>
-                On the production side, we focus on minimising waste in extraction and processing, and on moving toward more resource-efficient methods wherever the technology allows. It’s the same sustainability mindset that has guided our natural dye business from the start, now carried into a new category.
-              </p>
-
-              <div style={{ marginTop: '25px' }}>
-                <Link to="/sustainability" className="btn btn-primary">
-                  Explore Our Sustainability Commitments <ArrowRight size={16} style={{ marginLeft: 6 }} />
-                </Link>
-              </div>
-            </div>
-
-            <div className="feature-image-wrap">
-              <img
-                src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?auto=format&fit=crop&w=1000&q=80"
-                alt="Sustainable Agriculture and Raw Material Sourcing"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. Section: Quality Assurance */}
-      <section className="section-padding-lg" style={{ backgroundColor: '#ffffff' }}>
+      {/* ===================================================================
+          SECTION 2: QUALITY ASSURANCE & CERTIFICATIONS (#quality)
+         =================================================================== */}
+      <section id="quality" className="section-padding-lg" style={{ backgroundColor: 'var(--color-bg-linen)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', maxWidth: '850px', margin: '0 auto 40px' }}>
-            <span className="eyebrow" style={{ color: '#809E33' }}>QUALITY ASSURANCE</span>
+            <span className="eyebrow" style={{ color: '#809E33' }}>02 • QUALITY &amp; REGULATORY COMPLIANCE</span>
             <h2 className="section-heading">Compliance is the baseline, not the finish line</h2>
             <p className="section-description">
               Every product that leaves our facility is expected to meet food safety and quality benchmarks before it meets a customer’s own specification. We test for colour strength, stability, and purity as standard practice, so manufacturers can formulate with confidence rather than double-checking our numbers.
             </p>
           </div>
 
-          {/* Certifications Display — Fulfilling: [Certifications held — e.g. FSSAI, ISO 22000, Kosher, Halal — to be listed here once confirmed] */}
           <div
             style={{
-              background: '#f9fbfd',
+              background: '#ffffff',
               border: '1px solid var(--color-border)',
               borderRadius: '20px',
               padding: '35px 30px',
@@ -225,7 +451,7 @@ export default function AboutUs({ onOpenQuote }) {
           >
             <div style={{ textAlign: 'center', marginBottom: '25px' }}>
               <span style={{ fontSize: '13px', fontWeight: 700, color: 'var(--color-primary-dark)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
-                Verified Food-Grade Benchmarks & Religious Dietary Approvals
+                Verified Food-Grade Benchmarks &amp; Religious Dietary Approvals
               </span>
             </div>
 
@@ -250,6 +476,59 @@ export default function AboutUs({ onOpenQuote }) {
         </div>
       </section>
 
+      {/* ===================================================================
+          SECTION 3: INFRASTRUCTURE & FACILITIES (#infrastructure)
+         =================================================================== */}
+      <section id="infrastructure" className="section-padding-lg" style={{ backgroundColor: '#ffffff' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', maxWidth: '850px', margin: '0 auto 50px' }}>
+            <span className="eyebrow" style={{ color: '#809E33' }}>03 • INFRASTRUCTURE &amp; FACILITIES</span>
+            <h2 className="section-heading">Manufacturing &amp; R&amp;D Powerhouse in Jaipur</h2>
+            <p className="section-description">
+              State-of-the-art botanical extraction plant, cleanroom drying towers, and 3 specialized analytical laboratories in Jaipur, India.
+            </p>
+          </div>
+
+          <div className="feature-row">
+            <div className="feature-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=1000&q=80"
+                alt="Extraction Facilities"
+              />
+            </div>
+            <div className="feature-content">
+              <span className="eyebrow" style={{ color: '#809E33' }}>HIGH-CAPACITY PLANT</span>
+              <h2>Botanical Solvent Extraction &amp; Spray Drying</h2>
+              <p>
+                Our 50,000 sq. ft. manufacturing facility houses automated counter-current extraction units, falling-film evaporators, and sanitary spray drying towers capable of producing over 1,500 Metric Tons of food-grade natural color powders annually.
+              </p>
+              <p>
+                To ensure maximum pigment retention and thermal stability, our spray drying towers operate under strict low-temperature, vacuum-assisted conditions. This protects heat-sensitive compounds like Anthocyanins and Betalains, resulting in superior color vibrancy and extended shelf-life for your final application.
+              </p>
+            </div>
+          </div>
+
+          <div className="feature-row reverse" style={{ marginTop: '5rem' }}>
+            <div className="feature-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1000&q=80"
+                alt="R&D Lab"
+              />
+            </div>
+            <div className="feature-content">
+              <span className="eyebrow" style={{ color: '#809E33' }}>3 SPECIALIZED LABS</span>
+              <h2>Analytical Chemistry &amp; Quality Control</h2>
+              <p>
+                Quality is non-negotiable in food ingredients. Our three dedicated on-site laboratories (Analytical, Microbiological, and Applications) ensure that every batch meets stringent international standards.
+              </p>
+              <p>
+                We are equipped with advanced High-Performance Liquid Chromatography (HPLC) to measure active pigment concentrations precisely, alongside Gas Chromatography-Mass Spectrometry (GC-MS) to screen for pesticide residues. Every batch undergoes rigorous microbial and heavy metal testing, ensuring complete food safety before dispatch.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 7. Section: What Makes Us Different */}
       <section className="section-padding-lg" style={{ backgroundColor: 'var(--color-bg-linen)' }}>
         <div className="container">
@@ -262,7 +541,6 @@ export default function AboutUs({ onOpenQuote }) {
           </div>
 
           <div className="about-diff-grid">
-            {/* Card 1: Color Trends */}
             <div className="about-diff-card">
               <div className="about-diff-icon">
                 <TrendingUp size={26} />
@@ -276,7 +554,6 @@ export default function AboutUs({ onOpenQuote }) {
               </Link>
             </div>
 
-            {/* Card 2: Explore by Shade */}
             <div className="about-diff-card">
               <div className="about-diff-icon">
                 <Palette size={26} />
@@ -290,7 +567,6 @@ export default function AboutUs({ onOpenQuote }) {
               </Link>
             </div>
 
-            {/* Card 3: From Switch to Shelf */}
             <div className="about-diff-card">
               <div className="about-diff-icon">
                 <Sparkles size={26} />
@@ -299,17 +575,16 @@ export default function AboutUs({ onOpenQuote }) {
               <p className="about-diff-desc">
                 Replacing a synthetic colour isn’t a straight swap. Our technical team works alongside your formulation team through that transition, matching shade, testing stability under your real processing conditions, and troubleshooting before it hits production.
               </p>
-              <Link to="/food-lab" className="about-diff-link">
+              <Link to="/contact" className="about-diff-link">
                 Technical Co-Development <ArrowRight size={15} />
               </Link>
             </div>
 
-            {/* Card 4: Traceability & Availability */}
             <div className="about-diff-card">
               <div className="about-diff-icon">
                 <Clock size={26} />
               </div>
-              <h3 className="about-diff-title">Traceability & Availability — Know where it comes from, count on it being there</h3>
+              <h3 className="about-diff-title">Traceability &amp; Availability — Know where it comes from, count on it being there</h3>
               <p className="about-diff-desc">
                 Every batch is traceable back to its raw material source. And because natural sourcing can be seasonal, we plan our supply around year-round availability, so a shade you qualify today isn’t unavailable six months from now.
               </p>
@@ -374,7 +649,7 @@ export default function AboutUs({ onOpenQuote }) {
           </p>
           <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <button className="btn btn-warning" onClick={() => onOpenQuote()}>
-              Request Technical Quote & Samples <ArrowRight size={16} style={{ marginLeft: 6 }} />
+              Request Technical Quote &amp; Samples <ArrowRight size={16} style={{ marginLeft: 6 }} />
             </button>
             <Link to="/products" className="btn btn-outline-light">
               Explore Our Natural Color Catalog
